@@ -10,7 +10,7 @@ use axum::{
         ws::{Message, WebSocket, WebSocketUpgrade},
         State,
     },
-    response::{Html, IntoResponse},
+    response::IntoResponse,
     routing::get,
     Router,
 };
@@ -135,7 +135,7 @@ async fn connect(ws: WebSocket, state: Arc<AppState>) {
     state.user_names.lock().unwrap().remove(&username);
 }
 
-async fn index() -> Html<&'static str> {
+async fn index() -> &'static str {
     //return web page for messaging
-    Html(std::include_str!("../html/index.html"))
+    &"Hello world!"
 }
