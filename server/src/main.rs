@@ -58,6 +58,7 @@ async fn websocket_handler(
     State(state): State<Arc<AppState>>,
 ) -> impl IntoResponse {
     //upgrades our connection to websocket and passes the new socket to `connect`
+    println!("attempt to connect to server");
     ws.on_upgrade(move |socket| connect(socket, state))
 }
 
@@ -87,7 +88,7 @@ async fn connect(ws: WebSocket, state: Arc<AppState>) {
                 break;
             } else {
                 let _ = sender
-                    .send(Message::Text(String::from("username take")))
+                    .send(Message::Text(String::from("Username Taken")))
                     .await;
                 return;
             }

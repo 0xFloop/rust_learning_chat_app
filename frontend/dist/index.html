@@ -1,68 +1,17 @@
 <!DOCTYPE html><html><head>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,">
-    <title>Test Rust Chat App</title>
+    <title>Yew App</title>
     <base href="/">
   
-<link rel="preload" href="/chat_frontend-83533b29d511573d_bg.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" integrity="sha384-rYhvogQRLoDURPED6njpZDvcjuuXMm8dFn8Z8jAIAIBWrTl944TEFdQuQh7ZAfMb">
-<link rel="modulepreload" href="/chat_frontend-83533b29d511573d.js" crossorigin="anonymous" integrity="sha384-1pdzgpIPlMwENU2F36xvh6Ls9bXWTLmOL1LBP-z8evGd4-DwCK_GFRXsmgjkrZvi"></head>
+<link rel="preload" href="/chat_frontend-8e2d6d67a6ca9de9_bg.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" integrity="sha384-5FG2sgfuzgLKTg_23IxAVJqsooSmyeYpa7WOKve7X_GfrToTPIO1qju5XIsecesP">
+<link rel="modulepreload" href="/chat_frontend-8e2d6d67a6ca9de9.js" crossorigin="anonymous" integrity="sha384-xZmtkkER8a3E8WWFCtom63ZZrTuneSFpC2HRtYyPdGPXZnmQ0MeC4EKoKJahx2dr"></head>
   <body>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="module">
-import init, * as bindings from '/chat_frontend-83533b29d511573d.js';
-init('/chat_frontend-83533b29d511573d_bg.wasm');
+import init, * as bindings from '/chat_frontend-8e2d6d67a6ca9de9.js';
+init('/chat_frontend-8e2d6d67a6ca9de9_bg.wasm');
 window.wasmBindings = bindings;
 
 </script><script>"use strict";
@@ -193,4 +142,4 @@ window.wasmBindings = bindings;
     new Client(url).start();
 
 })()
-</script></body></html><!-- <!DOCTYPE html> --><!-- <html lang="en"> --><!--     <head> --><!--         <meta charset="UTF-8"> --><!--         <title>WebSocket Chat</title> --><!--     </head> --><!--     <body> --><!--         <h1>WebSocket Chat Example</h1> --><!----><!--         <input id="username" style="display:block; width:100px; box-sizing: border-box" type="text" placeholder="username"> --><!--         <button id="join-chat" type="button">Join Chat</button> --><!--         <textarea id="chat" style="display:block; width:600px; height:400px; box-sizing: border-box" cols="30" rows="10"></textarea> --><!--         <input id="input" style="display:block; width:600px; box-sizing: border-box" type="text" placeholder="chat"> --><!----><!--         <script> --><!--             const username = document.querySelector("#username"); --><!--             const join_btn = document.querySelector("#join-chat"); --><!--             const textarea = document.querySelector("#chat"); --><!--             const input = document.querySelector("#input"); --><!----><!--             join_btn.addEventListener("click", function(e) { --><!--                 this.disabled = true; --><!----><!--                 const websocket = new WebSocket("ws://localhost:3000/api/connect"); --><!----><!--                 websocket.onopen = function() { --><!--                     console.log("connection opened"); --><!--                     websocket.send(username.value); --><!--                 } --><!----><!----><!--                 websocket.onclose = function() { --><!--                     console.log("connection closed"); --><!--                     this.disabled = false; --><!--                 } --><!----><!--                 websocket.onmessage = function(e) { --><!--                     console.log("received message: "+e.data); --><!--                     textarea.value += e.data+"\r\n"; --><!--                 } --><!----><!--                 input.onkeydown = function(e) { --><!--                     if (e.key == "Enter") { --><!--                         websocket.send(input.value); --><!--                         input.value = ""; --><!--                     } --><!--                 } --><!--             }); --><!--         </script> --><!--     </body> --><!-- </html> -->
+</script></body></html>
